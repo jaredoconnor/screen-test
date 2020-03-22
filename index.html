@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script>
+      window.onload = function() {
+        var colors = ['black', 'white', 'red', 'green', 'blue', 'gray']
+        document.body.onclick = function(e) {
+          var color = colors.shift()
+          colors.push(color)
+          document.body.innerHTML = ''
+          document.body.style.backgroundColor = color
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Make the browser full screen and click the page to cycle through background colors.</p>
+  </body>
+</html>
