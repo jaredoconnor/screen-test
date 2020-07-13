@@ -1,13 +1,24 @@
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no, shrink-to-fit=no">
     <script>
       window.onload = function() {
-        var colors = ['black', 'white', 'red', 'green', 'blue', 'gray']
+        var backgrounds = [
+          'black',
+          'white',
+          'red',
+          'green',
+          'blue',
+          'gray',
+          'url("pattern-1.png") left top',
+          'url("pattern-2.png") left top'
+        ]
         document.body.onclick = function(e) {
-          var color = colors.shift()
-          colors.push(color)
+          var background = backgrounds.shift()
+          backgrounds.push(background)
           document.body.innerHTML = ''
-          document.body.style.backgroundColor = color
+          document.body.style.background = background
         }
       }
     </script>
